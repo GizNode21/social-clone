@@ -18,9 +18,9 @@ const validateLogin = [
         .exists({ checkFalsy: true })
         .withMessage("Please provide a password."),
     handleValidationErrors
-]
+];
 
-router.post(
+/*router.post(
     "/",
     validateLogin,
     asyncHandler(async (req, res, next) => {
@@ -65,7 +65,7 @@ router.get(
             });
         } else return res.json({});
     }
-);
+);*/
 
 
 module.exports = router;
