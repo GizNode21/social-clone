@@ -1,0 +1,38 @@
+ {
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "ecmaFeatures": {
+      "globalReturn": false,
+      "jsx": true
+    },
+    "babelOptions": {
+      "configFile": "./.babelrc"
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "commonjs": true
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react/jsx_runtime" 
+      ],
+      "plugins": [
+        "react"
+      ],
+      "settings": {
+        "react": {
+          "version": "detect" 
+        },
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"] // Add extensions here
+          }
+        }
+      }
+    }
+}
