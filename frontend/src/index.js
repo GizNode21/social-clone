@@ -8,12 +8,15 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.js";
 
-import createStore from "./store/index.js";
+import configureStore from "./store/index.js";
+import { restoreCSRF, csrfFetch } from "./store/csrf.js";
 
-const store = createStore();
+const store = configureStore();
 
 if (process.env.NODE_ENV !== 'production') {
     try {
+        restoreCSRF();
+        window.csrfFetch = csrfFetch;
         window.store = store;
     } catch (err) {
         console.log(err, "window is undefined");

@@ -77,6 +77,13 @@ devtool: "eval-source-map",
     extensions: ['', '.js', '.jsx'],
   },
   devServer: {
+    proxy: [{
+        context: ['/api'],
+        target: 'http://localhost:5000',
+        router: 'localhost:5000/api',  // This path will be proxied
+        changeOrigin: true,
+        secure: false, // Set to true if your backend uses valid SSL
+    }],
     historyApiFallback: true,
     static: './'
   },
