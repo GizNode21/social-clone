@@ -10,7 +10,7 @@ import App from "./App.js";
 
 import configureStore from "./store/index.js";
 import { restoreCSRF, csrfFetch } from "./store/csrf.js";
-
+import * as sessionActions from "./store/session.js";
 const store = configureStore();
 
 if (process.env.NODE_ENV !== 'production') {
@@ -18,6 +18,7 @@ if (process.env.NODE_ENV !== 'production') {
         restoreCSRF();
         window.csrfFetch = csrfFetch;
         window.store = store;
+        window.sessionActions = sessionActions;
     } catch (err) {
         console.log(err, "window is undefined");
     }

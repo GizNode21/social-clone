@@ -5,7 +5,8 @@ import sessionReducer from "./session.js";
 import logger from "redux-logger";
 import { thunk } from "redux-thunk";
 
-const rootReducer = combineReducers({ sessionReducer
+const rootReducer = combineReducers({ 
+    session: sessionReducer,
 });
 let enhancer;
 //let composeEnhancers;
