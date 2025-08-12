@@ -28,7 +28,7 @@ const validateSignup = [
     handleValidationErrors
 ];
 
-/*router.post(
+router.post(
     "/",
     validateSignup,
     asyncHandler(async (req, res) => {
@@ -41,6 +41,6 @@ const validateSignup = [
             user
         });
     })
-);*/
+);
 
 module.exports = router;

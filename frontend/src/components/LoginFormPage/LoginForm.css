@@ -1,0 +1,12 @@
+input, button {
+    margin-left: 15px;
+}
+label {
+    margin-left: 10px;
+}
+button {
+    background-color: black;
+    color: white;
+}
+
+
